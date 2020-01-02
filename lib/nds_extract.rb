@@ -4,10 +4,10 @@ require 'directors_database'
 def directors_totals(nds)
 index = 0
 movie = directors_database[:name][:movies]
-total = 0
+total = {}
 
 while index < movie.length do
-  total += movie[index][:worldwide_gross]
+  total << movie[index][:worldwide_gross]
   index += 1
 end
 total
