@@ -6,7 +6,7 @@ index = 0
 total = {}
 
 while index < directors_database.length do
-  total << directors[index][0][:worldwide_gross]
+  total << directors[index][index][:worldwide_gross]
   index += 1
 end
 total
