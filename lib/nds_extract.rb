@@ -2,16 +2,13 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 
 def directors_totals(nds)
-  movie_index = 0
-  movies = director_data[:movies]
-  total_gross_for_director = 0
+result = {}
+movie_index = 0
 
-  while movie_index < movies.length do
-    total_gross_for_director += movies[movie_index][:worldwide_gross]
-    movie_index += 1
-  end
-  total_gross_for_director
+while movie_index < nds.length do
+  result << nds[movie_index][:worldwide_gross]
 end
+result
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
   #
@@ -27,3 +24,4 @@ end
   #
   #
   # Be sure to return the result at the end!
+end
