@@ -2,14 +2,17 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 
 def directors_totals(nds)
-index = 0
-total = {}
+  result = {}
+  nil
 
-while index < directors_database.length do
-  total << directors[index][index][:worldwide_gross]
-  index += 1
+  director_index = 0
+  while director_index < nds.length do
+    current_director = nds[director_index][:name]
+    result[current_director] = gross_for_director( nds[director_index] )
+    director_index += 1
+  end
+  result
 end
-total
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
   #
