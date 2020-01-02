@@ -2,6 +2,11 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 
 def directors_totals(nds)
+money = directors_database[0][0][0][:worldwide_gross]
+row_index = 0
+while row_index < money.length do
+  
+end
 
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
